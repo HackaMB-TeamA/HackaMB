@@ -1,0 +1,46 @@
+{
+  "name": "hackamb-backend",
+  "version": "1.0.0",
+  "description": "Hackathon MBlabs backend",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {    
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"   
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HackaMB-TeamA/HackaMB-backend.git"
+  },
+  "keywords": [
+    "nodejs",
+    "api",
+    "backend"
+  ],
+  "author": "MBlabs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HackaMB-TeamA/HackaMB-backend/issues"
+  },
+  "homepage": "https://github.com/HackaMB-TeamA/HackaMB-backend#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run lint",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "dependencies": {
+    "commitlint": "^12.0.1",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.22.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "express": "^4.17.1",
+    "husky": "^5.1.3",
+    "prettier": "^2.2.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.0.1",
+    "@commitlint/config-conventional": "^12.0.1"
+  }
+}
