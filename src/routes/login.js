@@ -5,7 +5,12 @@ const router = express.Router();
 
 router.post('/',
   async (req, res) => {
-    const response = await AuthenticateService.authenticate(req.body.email, req.body.password);
+    let response;
+    try {
+      response = await AuthenticateService.authenticate(req.body.email, req.body.password);
+    } catch (err) {
+      return res.send(err);
+    }
     return res.send(response);
   });
 

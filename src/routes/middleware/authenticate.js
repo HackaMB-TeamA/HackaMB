@@ -21,13 +21,13 @@ export default function auth() {
       res.sendStatus(401);
     }
 
-    const userId = verify(authorization[1], process.env.JWT_SECRET_KEY);
+    const token = verify(authorization[1], '8d85f1fd-ee6b-4ba1-bea9-17bd4e2d701d');
 
-    if (!userId) {
+    if (!token) {
       res.sendStatus(401);
     }
 
-    req.userId = userId;
+    req.userId = token.userId;
     return next();
   };
 }

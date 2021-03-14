@@ -9,9 +9,9 @@ export default class AuthenticateService {
       throw new Error('Usuario não encontrado');
     }
 
-    const token = sign({ userId: user.id }, process.env.JWT_SECRET_KEY, {
-      expiresIn: process.env.JWT_SECRET_EXPIRE,
+    const token = sign({ userId: user.id }, '8d85f1fd-ee6b-4ba1-bea9-17bd4e2d701d', {
+      expiresIn: '2h',
     });
-    return token;
+    return { token };
   }
 }

@@ -6,14 +6,24 @@ const router = express.Router();
 
 router.post('/',
   async (req, res) => {
-    const response = await UserService.createUser(req.body);
+    let response;
+    try {
+      response = await UserService.createUser(req.body);
+    } catch (err) {
+      return res.send(err);
+    }
     return res.send(response);
   });
 
 router.get('/me',
   auth(),
   async (req, res) => {
-    const response = await UserService.getUserLogged(req.userId);
+    let response;
+    try {
+      response = await UserService.getUserLogged(req.userId);
+    } catch (err) {
+      return res.send(err);
+    }
     return res.send(response);
   });
 
