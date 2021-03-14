@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "Hackathon MBlabs backend",
   "main": "index.js",
-  "type": "module",
-  "scripts": {    
-    "start": "node src/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"   
+  "scripts": {
+    "start": "node -r esm src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -32,12 +31,17 @@
   "dependencies": {
     "commitlint": "^12.0.1",
     "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
     "eslint": "^7.22.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
+    "esm": "^3.2.25",
     "express": "^4.17.1",
     "husky": "^5.1.3",
-    "prettier": "^2.2.1"
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.0",
+    "prettier": "^2.2.1",
+    "socket.io": "^4.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",
