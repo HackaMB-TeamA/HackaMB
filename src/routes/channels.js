@@ -5,13 +5,13 @@ const router = express.Router();
 
 router.post('/',
   async (req, res) => {
-    const response = await ChannelsService.createUser(req.body);
+    const response = await ChannelsService.createChannels(req.body);
     return res.send(response);
   });
 
 router.get('/',
   async (req, res) => {
-    const response = await ChannelsService.getUserLogged(req.userId);
+    const response = await ChannelsService.listChannels();
     return res.send(response);
   });
 

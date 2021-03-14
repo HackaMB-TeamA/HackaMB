@@ -1,8 +1,8 @@
-import Channels from '../database/models/news';
+import Channels from '../database/models/channels';
 
 export default class ChannelsService {
-  static async createChannels(news) {
-    const response = await Channels.create(news);
+  static async createChannels(channel) {
+    const response = await Channels.create(channel);
     return response;
   }
 

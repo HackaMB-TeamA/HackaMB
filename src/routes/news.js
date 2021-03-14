@@ -14,5 +14,4 @@ router.get('/',
     const response = await NewsService.listNews();
     return res.send(response);
   });
-
 export default router;
